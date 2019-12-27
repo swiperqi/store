@@ -1,0 +1,23 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: store
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/store?userUnicode=true&characterEncoding=utf8&userSSL=false&userLegacyDatetimeCode=false&serverTimezone=CTT
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath*:sqlmap/**/*.xml
+
+
+logging:
+  level:
+    root: INFO
+    com:
+      aisino: DEBUG
+    org:
+      springframework:
+        data: DEBUG
