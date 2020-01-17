@@ -6,8 +6,26 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/store?userUnicode=true&characterEncoding=utf8&userSSL=false&userLegacyDatetimeCode=false&serverTimezone=CTT
-    username: root
-    password: root
+    username: qiqi
+    password: 123456
+  rabbitmq:
+    host: 192.168.73.128
+    virtual-host: coreserver
+    port: 5672
+    username: qiqi
+    password: 123456
+
+rabbit:
+  queue:
+    name:
+      log: log
+      testQueue: test_queue
+  exchange:
+    name:
+      log: log
+  routing:
+    name:
+      log: log
 
 mybatis:
   mapper-locations: classpath*:sqlmap/**/*.xml
